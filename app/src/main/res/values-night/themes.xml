@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TowerDriver" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/main_night_color</item>
+        <item name="colorOnPrimary">@color/main_night_color</item>
+        <!-- Status bar color -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <!-- Customize your theme here. -->
+        <item name="background">@color/background</item>
+        <item name="android:fontFamily">@font/pingguoziti</item>
+    </style>
+</resources>

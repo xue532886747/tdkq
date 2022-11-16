@@ -1,0 +1,175 @@
+plugins {
+    id 'com.android.application'
+
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'com.huawei.agconnect'
+
+//android配置
+def config = rootProject.ext.android
+//相关库依赖
+def library = rootProject.ext.supportDependencies
+
+android {
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        applicationId config.applicationId
+        versionCode config.versionCode
+        versionName config.versionName
+        testInstrumentationRunner config.testInstrumentationRunner
+        flavorDimensions "versionCode"
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a','x86', 'mips'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY  : "4aa7ae8a2a2d1a5848a4af52", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+                XIAOMI_APPID  : "2882303761519966981",
+                XIAOMI_APPKEY : "5681996685981",
+                OPPO_APPKEY   : "OP-oppo的APPKEY",
+                OPPO_APPID    : "OP-oppo的APPID",
+                OPPO_APPSECRET: "OP-oppo的APPSECRET",
+                VIVO_APPKEY   : "vivo的APPKEY",
+                VIVO_APPID    : "vivo的APPID"
+        ]
+    }
+
+    signingConfigs {
+        release {
+            //.jks文件放在项目目录（app目录）
+            storeFile file("alex.jks")//签名文件名
+            storePassword "123456"//密码
+            keyAlias "key0"//别名
+            keyPassword "123456"//密码
+        }
+        debug {
+            //.jks文件放在项目目录
+            storeFile file("alex.jks")
+            storePassword "123456"
+            keyAlias "key0"
+            keyPassword "123456"
+        }
+    }
+    productFlavors {
+        huawei {
+            manifestPlaceholders = [APP_CHANNEL_VALUE: "huawei"]
+        }
+        xiaomi {
+            manifestPlaceholders = [APP_CHANNEL_VALUE: "xiaomi"]
+        }
+        oppo {
+            manifestPlaceholders = [APP_CHANNEL_VALUE: "oppo"]
+        }
+        vivo {
+            manifestPlaceholders = [APP_CHANNEL_VALUE: "vivo"]
+        }
+        yingyongbao {
+            manifestPlaceholders = [APP_CHANNEL_VALUE: "yingyongbao"]
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', "*.aar"])
+    implementation project(':lazyfragment')
+    implementation project(':network')
+    implementation project(':base_ui')
+    implementation project(':BaiduLBS_AndroidSDK_Lib')
+    implementation project(':alipaysdk-15.8.03.210428205839')
+    implementation project(':faceplatform-ui')
+    implementation project(':zxing')
+    implementation project(':jiguang')
+    implementation project(':bugly')
+    implementation project(':meiqia')
+    implementation project(':umen')
+    implementation library.implementation_androidx_appcompat
+    implementation library.implementation_material_material
+    implementation library.implementation_androidx_constraintlayout
+    implementation library.implementation_multidex
+    //本地通知
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
+    //eventBus
+    implementation library.implementation_eventbus
+
+
+    testImplementation library.testImplementation_test_junit
+    androidTestImplementation library.androidTestImplementation_junit
+    androidTestImplementation library.androidTestImplementation_androidx_test_espresso
+    implementation library.implementation_ktx_core
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    // RxJava2 + Retrofit2 + OkHttp3
+    implementation library.implementation_okhttp3
+    implementation library.implementation_rxjava2_rxjava
+    implementation library.implementation_rxjava2_rxandroid
+    implementation library.implementation_retrofit2_retrofit
+    implementation library.implementation_retrofit2_converter_gson
+    implementation library.implementation_retrofit2_adapter_rxjava2
+    implementation library.implementation_retrofit2_retrofit_converters
+    implementation library.implementation_okhttp3_logging_interceptor
+    //沉浸式
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+    implementation library.implementation_bumptech_glide_glide
+    annotationProcessor library.annotationProcessor_bumptech_glide_compiler
+    implementation library.implementation_wasabeef
+    //适配器
+    implementation library.implementation_BaseRecyclerViewAdapterHelper
+    implementation library.implementation_flexbox
+    //butterknife
+    implementation library.implementation_butterknife
+    annotationProcessor library.annotationProcessor_butterknife_compiler
+    //权限申请
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+    //裁剪
+    implementation 'com.github.yalantis:ucrop:2.2.6'
+    //相册选择
+    implementation 'com.github.donkingliang:ImageSelector:2.2.0'
+    //轮播图
+    implementation 'io.github.youth5201314:banner:2.2.2'
+    //弹窗
+    implementation 'com.github.getActivity:ToastUtils:9.2'
+    //滑动条
+    implementation library.implementation_magicIndicator
+    //上拉下拉刷新
+    implementation library.implementation_smartrefresh_SmartRefreshLayout
+    implementation library.implementation_smartrefresh_SmartRefreshHeader
+    //内存泄露
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+    //照片压缩
+    implementation 'top.zibin:Luban:1.1.8'
+    //图片观看
+    implementation 'com.bm.photoview:library:1.4.1'
+    //微信支付
+    implementation library.implementation_wechat
+    implementation 'me.zhanghai.android.materialratingbar:library:1.4.0'
+
+}
+repositories {
+    mavenCentral()
+
+
+}

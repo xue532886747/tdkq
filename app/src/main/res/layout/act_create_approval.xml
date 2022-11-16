@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:background="@color/main_light_color">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="match_parent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:src="@mipmap/log_white_back" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/WhiteTitleTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_approval" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white_bg">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="*"
+                    android:textColor="@color/text_red"
+                    android:textSize="@dimen/dp_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="申请标题"
+                    android:textColor="@color/text_black_title"
+                    android:textSize="@dimen/dp_14"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatTextView8"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:background="@null"
+                    android:hint="@string/driver_release_edit_title"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:textColor="@color/text_black_title"
+                    android:textSize="@dimen/dp_12"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/appCompatTextView9"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView9" />
+
+                <View
+                    android:id="@+id/view6"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:background="@color/line_black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white_bg">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="*"
+                    android:textColor="@color/text_red"
+                    android:textSize="@dimen/dp_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="申请详情"
+                    android:textColor="@color/text_black_title"
+                    android:textSize="@dimen/dp_14"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatTextView10"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_content"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_80"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:background="@drawable/down_code_img_bg"
+                    android:gravity="top"
+                    android:hint="@string/driver_release_edit_content"
+                    android:maxLength="200"
+                    android:padding="@dimen/dp_5"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="@dimen/dp_12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/appCompatTextView11"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView11" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white_bg">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="图片"
+                    android:textColor="@color/text_black_title"
+                    android:textSize="@dimen/dp_14"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_image_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView12" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white_bg">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="附件"
+                    android:textColor="@color/text_black_title"
+                    android:textSize="@dimen/dp_14"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bt_add_files"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:background="@drawable/login_out"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="添加文件"
+                    android:textColor="@color/text_black_title"
+                    android:textSize="@dimen/dp_12"
+                    app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView13"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatTextView13" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_file_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView13" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white_bg">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="*"
+                    android:textColor="@color/text_red"
+                    android:textSize="@dimen/dp_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="审批人列表"
+                    android:textColor="@color/text_black_title"
+                    android:textSize="@dimen/dp_14"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatTextView14"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bt_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:background="@drawable/login_out"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="点击添加"
+                    android:textColor="@color/text_black_title"
+                    android:textSize="@dimen/dp_12"
+                    app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView15"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatTextView15" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_person_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView15" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@color/white_bg"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bt_commit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:layout_marginEnd="@dimen/dp_30"
+                    android:background="@drawable/login_bottom_bg"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="@string/commit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp_16" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

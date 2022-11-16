@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/right_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/left_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/rel_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/rl_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:src="@mipmap/log_black_back" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/BlackTitleTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:text="@string/register"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rel_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_60"
+                android:src="@mipmap/logtdkq" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:foreground="?android:attr/selectableItemBackground">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView"
+                    style="@style/RegisterStarStyle"
+                    android:layout_centerVertical="true"
+                    android:text="@string/star"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_tel"
+                    style="@style/RegisterTextViewStyle"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:hint="@string/register_tel"
+                    android:inputType="phone"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatTextView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:background="@color/line_black" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView3"
+                    style="@style/RegisterStarStyle"
+                    android:layout_centerVertical="true"
+                    android:text="@string/star"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_verification"
+                    style="@style/RegisterTextViewStyle"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:hint="@string/register_verification_code"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/bt_verification"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatTextView3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bt_verification"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="@string/register_get_code"
+                    android:textColor="@color/text_green_color"
+                    android:textSize="@dimen/dp_12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:background="@color/line_black" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView4"
+                    style="@style/RegisterStarStyle"
+                    android:layout_centerVertical="true"
+                    android:text="@string/star"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_pass"
+                    style="@style/RegisterTextViewStyle"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:hint="@string/register_login_pass"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatTextView4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:background="@color/line_black" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView5"
+                    style="@style/RegisterStarStyle"
+                    android:layout_centerVertical="true"
+                    android:text="@string/star"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_pass_again"
+                    style="@style/RegisterTextViewStyle"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:hint="@string/register_input_pass"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatTextView5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:background="@color/line_black" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_load"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:background="@drawable/login_bottom_bg"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="@string/register"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_goto_load"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_20">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/have_account"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="@dimen/dp_12" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:text="@string/go_to_login"
+                    android:textColor="@color/text_green_color"
+                    android:textSize="@dimen/dp_12" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

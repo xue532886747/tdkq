@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="@color/line_black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_home"
+            style="@style/AppBottomMainLlStyle">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:src="@drawable/repair_weixiu_select" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/AppBottomMainTvStyle"
+                android:text="@string/repair_order"
+                android:textSize="@dimen/dp_12" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_rescue"
+            style="@style/AppBottomMainLlStyle">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:src="@drawable/repair_warehouse_select" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/AppBottomMainTvStyle"
+                android:text="@string/repair_warehouse"
+                android:textSize="@dimen/dp_12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_mine"
+            style="@style/AppBottomMainLlStyle">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:src="@drawable/station_mine_select" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/AppBottomMainTvStyle"
+                android:text="@string/mine"
+                android:textSize="@dimen/dp_12" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

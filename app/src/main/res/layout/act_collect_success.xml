@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:background="@color/main_light_color"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:src="@mipmap/log_white_back" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/WhiteTitleTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/person_collection" />
+
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.towerdriver.weight.CircleImageView
+            android:id="@+id/iv_member_img"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp_30"
+            android:src="@mipmap/image_head"
+            app:border_color="@color/main_light_color"
+            app:border_width="@dimen/dp_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/collect_face_success"
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/dp_20"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_member_img" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_commit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:background="@drawable/login_bottom_bg"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/commit_notice"
+            android:textColor="@color/home_text_color_white"
+            android:textSize="@dimen/dp_18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

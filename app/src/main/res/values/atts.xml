@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="VerCodeEditText">
+        <attr name="figures" format="integer" />
+        <attr name="verCodeMargin" format="dimension" />
+        <attr name="bottomLineSelectedColor" format="reference" />
+        <attr name="bottomLineNormalColor" format="reference" />
+        <attr name="bottomLineHeight" format="dimension" />
+        <attr name="selectedBackgroundColor" format="reference" />
+        <attr name="cursorDuration" format="integer" />
+        <attr name="cursorWidth" format="dimension" />
+        <attr name="cursorColor" format="color|reference" />
+    </declare-styleable>
+
+    <!--圆形图片-->
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension|reference" />
+        <attr name="civ_border_overlay" format="color|reference" />
+        <attr name="civ_border_color" format="color|reference" />
+        <attr name="civ_fill_color" format="boolean" />
+    </declare-styleable>
+
+    <!--合成的图片-->
+    <declare-styleable name="CompositeImageView">
+        <attr name="composite_civ_border_have" format="boolean" />
+        <attr name="composite_civ_img_width" format="dimension"/>
+        <attr name="composite_civ_rect_width" format="dimension"/>
+        <attr name="composite_civ_rect_height" format="dimension"/>
+        <attr name="composite_civ_rect_bg" format="reference"/>
+    </declare-styleable>
+
+    <!--方形图片-->
+    <declare-styleable name="NiceImageView">
+        <attr name="is_circle" format="boolean" />
+        <attr name="is_cover_src" format="boolean" />
+        <attr name="corner_new_radius" format="dimension" />
+        <attr name="corner_top_left_radius" format="dimension" />
+        <attr name="corner_top_right_radius" format="dimension" />
+        <attr name="corner_bottom_left_radius" format="dimension" />
+        <attr name="corner_bottom_right_radius" format="dimension" />
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="inner_border_width" format="dimension" />
+        <attr name="inner_border_color" format="color" />
+        <attr name="mask_color" format="color" />
+    </declare-styleable>
+</resources>

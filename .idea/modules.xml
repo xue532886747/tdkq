@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TowerDriver.iml" filepath="$PROJECT_DIR$/.idea/modules/TowerDriver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BaiduLBS_AndroidSDK_Lib/TowerDriver.BaiduLBS_AndroidSDK_Lib.iml" filepath="$PROJECT_DIR$/.idea/modules/BaiduLBS_AndroidSDK_Lib/TowerDriver.BaiduLBS_AndroidSDK_Lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/alipaysdk-15.8.03.210428205839/TowerDriver.alipaysdk-15.8.03.210428205839.iml" filepath="$PROJECT_DIR$/.idea/modules/alipaysdk-15.8.03.210428205839/TowerDriver.alipaysdk-15.8.03.210428205839.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TowerDriver.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TowerDriver.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/base_ui/TowerDriver.base_ui.iml" filepath="$PROJECT_DIR$/.idea/modules/base_ui/TowerDriver.base_ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bugly/TowerDriver.bugly.iml" filepath="$PROJECT_DIR$/.idea/modules/bugly/TowerDriver.bugly.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/faceplatform-release/TowerDriver.faceplatform-release.iml" filepath="$PROJECT_DIR$/.idea/modules/faceplatform-release/TowerDriver.faceplatform-release.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/faceplatform-ui/TowerDriver.faceplatform-ui.iml" filepath="$PROJECT_DIR$/.idea/modules/faceplatform-ui/TowerDriver.faceplatform-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jiguang/TowerDriver.jiguang.iml" filepath="$PROJECT_DIR$/.idea/modules/jiguang/TowerDriver.jiguang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lazyfragment/TowerDriver.lazyfragment.iml" filepath="$PROJECT_DIR$/.idea/modules/lazyfragment/TowerDriver.lazyfragment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/meiqia/TowerDriver.meiqia.iml" filepath="$PROJECT_DIR$/.idea/modules/meiqia/TowerDriver.meiqia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/network/TowerDriver.network.iml" filepath="$PROJECT_DIR$/.idea/modules/network/TowerDriver.network.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/umen/TowerDriver.umen.iml" filepath="$PROJECT_DIR$/.idea/modules/umen/TowerDriver.umen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zxing/TowerDriver.zxing.iml" filepath="$PROJECT_DIR$/.idea/modules/zxing/TowerDriver.zxing.iml" />
+    </modules>
+  </component>
+</project>

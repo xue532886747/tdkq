@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:background="@color/main_light_color">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="match_parent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:src="@mipmap/log_white_back" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/WhiteTitleTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/driver_release" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_add"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="发布"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="救援评分"
+            android:textSize="@dimen/dp_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_point"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/dp_14"
+            app:layout_constraintBottom_toBottomOf="@+id/star"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/star"
+            app:layout_constraintTop_toTopOf="@+id/star" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/star"
+            style="@style/Widget.MaterialRatingBar.RatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginStart="@dimen/dp_10"
+            android:rating="5"
+            android:stepSize="1"
+            app:layout_constraintBottom_toBottomOf="@+id/point"
+            app:layout_constraintStart_toEndOf="@+id/point"
+            app:layout_constraintTop_toTopOf="@+id/point"
+            app:mrb_fillBackgroundStars="true"
+            app:mrb_progressTint="@color/main_light_color" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:background="@drawable/down_code_img_bg"
+            android:gravity="top"
+            android:hint="@string/driver_release_edit_content"
+            android:maxLength="100"
+            android:padding="@dimen/dp_5"
+            android:scrollbars="vertical"
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/dp_12"
+            app:layout_constraintTop_toBottomOf="@+id/point" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

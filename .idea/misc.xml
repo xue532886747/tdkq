@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/drawable/app_station_bottom_tv_color.xml" value="0.4875" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/drawable/main_rescue_battery_color.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/drawable/staff_order_select.xml" value="0.4875" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_face_prepare.xml" value="0.25364583333333335" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_good_detail.xml" value="0.17300724637681159" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_invite_list.xml" value="0.25364583333333335" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_real_auth.xml" value="0.2" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_rentcar_detail.xml" value="0.1390625" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_repair_main.xml" value="0.4841025641025641" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_select_menu.xml" value="0.17300724637681159" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_setting.xml" value="0.264" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_staff_main.xml" value="0.4713541666666667" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/adp_main_list_item.xml" value="0.17300724637681159" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/adp_menu_right.xml" value="0.17300724637681159" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/fragment_station_mine.xml" value="0.25364583333333335" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/faceplatform-ui/src/main/res/layout/activity_face_liveness_v3100.xml" value="0.25364583333333335" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

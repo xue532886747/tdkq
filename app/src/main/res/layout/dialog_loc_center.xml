@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_422"
+        android:layout_marginStart="@dimen/dp_37"
+        android:layout_marginEnd="@dimen/dp_37"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view_delete"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_alignParentEnd="true"
+            android:background="@mipmap/delete" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_410"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rect_white_bg">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:text="@string/notice_more"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="@dimen/dp_9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view9"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:layout_marginEnd="@dimen/dp_17"
+                    android:background="@color/line_black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_loc_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:layout_marginEnd="@dimen/dp_17"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="姓名"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="@dimen/dp_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view9" />
+
+                <View
+                    android:id="@+id/view10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:layout_marginEnd="@dimen/dp_17"
+                    android:background="@color/line_black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_loc_name" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_loc_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:layout_marginEnd="@dimen/dp_17"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="地址地址"
+                    android:textColor="@color/main_light_color"
+                    android:textSize="@dimen/dp_12"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+                <View
+                    android:id="@+id/view11"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:layout_marginEnd="@dimen/dp_17"
+                    android:background="@color/line_black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_loc_address" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_loc_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:layout_marginEnd="@dimen/dp_17"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="电话"
+                    android:textColor="@color/main_light_color"
+                    android:textSize="@dimen/dp_12"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view11" />
+
+                <View
+                    android:id="@+id/view12"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:layout_marginEnd="@dimen/dp_17"
+                    android:background="@color/line_black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_loc_phone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:text="@string/mentouzhao"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="@dimen/dp_12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view12" />
+
+                <com.example.towerdriver.weight.RectImageView
+                    android:id="@+id/iv_major"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_109"
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_17"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/log_image_bg"
+                    app:corner_bottom_left_radius="@dimen/dp_10"
+                    app:corner_bottom_right_radius="@dimen/dp_10"
+                    app:corner_top_left_radius="@dimen/dp_10"
+                    app:corner_top_right_radius="@dimen/dp_10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/around"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="@dimen/dp_12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_major" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_86"
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:layout_marginEnd="@dimen/dp_17"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+</LinearLayout>

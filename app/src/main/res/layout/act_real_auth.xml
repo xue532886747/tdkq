@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:background="@color/main_light_color"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:src="@mipmap/log_white_back" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/WhiteTitleTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/complete_detail" />
+
+    </RelativeLayout>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView10"
+                            style="@style/RealAuthTextViewStyle"
+                            android:layout_marginStart="@dimen/dp_15"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="@string/click_my_id_card"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_60"
+                            android:layout_marginStart="@dimen/dp_15"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_15"
+                            android:background="@drawable/real_auth_text_bg"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_6"
+                                android:layout_marginTop="@dimen/dp_8"
+                                android:text="@string/reminder"
+                                android:textColor="@color/main_top_tv_color_no"
+                                android:textSize="@dimen/dp_12" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_6"
+                                android:layout_marginTop="@dimen/dp_2"
+                                android:lineHeight="@dimen/dp_10"
+                                android:text="@string/real_auth_content"
+                                android:textColor="@color/real_auth_tv_color"
+                                android:textSize="@dimen/dp_12" />
+
+                        </LinearLayout>
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5" />
+
+                        <com.example.towerdriver.weight.RectImageView
+                            android:id="@+id/iv_id_card_front"
+                            android:layout_width="@dimen/dp_145"
+                            android:layout_height="@dimen/dp_91"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:clickable="false"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/configue_idently_zheng"
+                            app:corner_bottom_left_radius="@dimen/dp_10"
+                            app:corner_bottom_right_radius="@dimen/dp_10"
+                            app:corner_top_left_radius="@dimen/dp_10"
+                            app:corner_top_right_radius="@dimen/dp_10"
+                            app:layout_constraintEnd_toStartOf="@+id/guideline"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+                        <com.example.towerdriver.weight.RectImageView
+                            android:id="@+id/iv_id_card_back"
+                            android:layout_width="@dimen/dp_145"
+                            android:layout_height="@dimen/dp_91"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:clickable="false"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/configue_idently_fan"
+                            app:corner_bottom_left_radius="@dimen/dp_10"
+                            app:corner_bottom_right_radius="@dimen/dp_10"
+                            app:corner_top_left_radius="@dimen/dp_10"
+                            app:corner_top_right_radius="@dimen/dp_10"
+                            app:layout_constraintStart_toStartOf="@+id/guideline"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_user_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_30"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/iv_id_card_front">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView11"
+                                style="@style/RealAuthTextViewStyle"
+                                android:layout_marginStart="@dimen/dp_20"
+                                android:text="@string/please_check_info"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_26"
+                                android:text="@string/name"
+                                android:textColor="@color/text_login_hint"
+                                android:textSize="@dimen/dp_12"
+                                app:layout_constraintStart_toStartOf="@+id/textView11"
+                                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/tv_name"
+                                style="@style/RealAuthTextViewStyle"
+                                android:layout_width="0dp"
+                                android:layout_marginStart="@dimen/dp_104"
+                                android:layout_marginEnd="@dimen/dp_30"
+                                android:background="@null"
+                                app:layout_constraintBottom_toBottomOf="@+id/textView12"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_26"
+                                android:text="@string/address"
+                                android:textColor="@color/text_login_hint"
+                                android:textSize="@dimen/dp_12"
+                                app:layout_constraintStart_toStartOf="@+id/textView11"
+                                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/tv_address"
+                                style="@style/RealAuthTextViewStyle"
+                                android:layout_width="0dp"
+                                android:layout_marginStart="@dimen/dp_104"
+                                android:layout_marginEnd="@dimen/dp_30"
+                                android:background="@null"
+                                app:layout_constraintBottom_toBottomOf="@+id/textView13"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_26"
+                                android:text="@string/id_code"
+                                android:textColor="@color/text_login_hint"
+                                android:textSize="@dimen/dp_12"
+                                app:layout_constraintStart_toStartOf="@+id/textView11"
+                                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/tv_id_code"
+                                style="@style/RealAuthTextViewStyle"
+                                android:layout_width="0dp"
+                                android:layout_marginStart="@dimen/dp_104"
+                                android:layout_marginEnd="@dimen/dp_30"
+                                android:background="@null"
+                                app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+                            <View
+                                android:id="@+id/line1"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0_5"
+                                android:layout_marginStart="@dimen/dp_10"
+                                android:layout_marginTop="@dimen/dp_16"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                android:background="@color/line_black"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textView15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_26"
+                                android:text="@string/effective_date"
+                                android:textColor="@color/text_login_hint"
+                                android:textSize="@dimen/dp_12"
+                                app:layout_constraintStart_toStartOf="@+id/textView11"
+                                app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/tv_effect_date"
+                                style="@style/RealAuthTextViewStyle"
+                                android:layout_width="0dp"
+                                android:layout_marginStart="@dimen/dp_104"
+                                android:layout_marginEnd="@dimen/dp_30"
+                                android:background="@null"
+                                app:layout_constraintBottom_toBottomOf="@+id/textView15"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/textView15" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/bt_commit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_30"
+                                android:layout_marginTop="@dimen/dp_50"
+                                android:layout_marginEnd="@dimen/dp_30"
+                                android:background="@drawable/login_bottom_bg"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:text="@string/commit"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dp_18"
+                                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

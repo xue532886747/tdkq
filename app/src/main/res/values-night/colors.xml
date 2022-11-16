@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_light_color">#1B1A1A</color>
+    <color name="main_night_color">#1B1A1A</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="background">#FF666666</color>
+    <color name="white_bg">#FF666666</color>
+    <color name="main_buttom_bg_FFFEFDFC">#FFFEFDFC</color>
+    <color name="main_buttom_bg_line">#FFE6E6E6</color>
+    <color name="text_black_color">#FFFEFDFC</color>
+    <color name="main_top_tv_color">#FFFFFFFF</color>
+    <color name="main_top_tv_color_no">#FFF09803</color>
+    <color name="main_list_tv_color">#FFFEFDFC</color>
+    <color name="line_black">#FFFEFDFC</color>
+    <color name="text_green_color">#FFFEFDFC</color>
+    <color name="text_login_hint">#FFFEFDFC</color>
+    <color name="ver_black_color">#FFD8D8D8</color>
+    <color name="vertext_black_color">#FFFEFDFC</color>
+    <color name="text_code_color">#FFFEFDFC</color>
+
+    <color name="person_center_left_tv">#FFFEFDFC</color>
+    <color name="person_center_right_tv">#FFFEFDFC</color>
+
+    <color name="register_star">#FFFEFDFC</color>
+    <color name="member_line">#FFE4F6F6</color>
+    <color name="real_auth_bg">#1B1A1A</color>
+    <color name="real_auth_tv_color">#FFFEFDFC</color>
+
+    <color name="code_img_bg">#FFFEFDFC</color>
+    <color name="text_black_title">#FFFEFDFC</color>
+    <color name="login_out_bg">#FFFEFDFC</color>
+    <color name="login_out_text">#FFFEFDFC</color>
+    <color name="text_red">#E60250</color>
+
+    <color name="member_bg">#FFE4F6F6</color>
+    <color name="member_bg_line">#FFC4D6D6</color>
+    <color name="transparent">#00000000</color>
+    <color name="yellow_ff">#FFFFFFC9</color>
+    <color name="white_drak">#FFF7F7F7</color>
+</resources>

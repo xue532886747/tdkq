@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:background="@color/main_light_color">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="match_parent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:src="@mipmap/log_white_back" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/WhiteTitleTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/daka" />
+
+        <LinearLayout
+            android:id="@+id/ll_update"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_image"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:src="@mipmap/update" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll_dot"
+                        android:layout_width="@dimen/dp_150"
+                        android:layout_height="@dimen/dp_150"
+                        android:background="@drawable/main_dot_select"
+                        android:elevation="@dimen/dp_10"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toTopOf="@+id/constraintLayout7"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginBottom="@dimen/dp_30">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dp_20"
+                            android:textStyle="bold" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <LinearLayout
+                        android:id="@+id/constraintLayout7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_20"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/ll_dot"
+                        app:layout_constraintStart_toStartOf="@+id/ll_dot"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/appCompatImageView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/loc" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_black_color"
+                            android:textSize="@dimen/dp_12" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/bt_shangban"
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginStart="@dimen/dp_30"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:background="@drawable/login_bottom_bg"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:text="上班打卡"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dp_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/bt_xiaban"
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_30"
+                        android:background="@drawable/down_code_img_bg"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:text="下班打卡"
+                        android:textColor="@color/main_light_color"
+                        android:textSize="@dimen/dp_12"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

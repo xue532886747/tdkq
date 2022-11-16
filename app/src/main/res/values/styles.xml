@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+<!--        <item name="colorPrimary">@color/white</item>-->
+        <item name="android:windowBackground">@drawable/log_qdt</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <!--Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+        <item name="android:windowFullscreen">true</item>
+<!--        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>-->
+
+    </style>
+
+    <!--字体选中和未选中的颜色-->
+    <style name="MainBottomTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_12</item>
+        <item name="android:textColor">@drawable/main_bottom_tv_color</item>
+    </style>
+
+    <style name="MainTopLeftTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_12</item>
+        <item name="android:textColor">@drawable/main_top_tv_color</item>
+        <item name="android:background">@drawable/main_top_left_tv_bg</item>
+    </style>
+
+    <style name="MainTopRightTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_12</item>
+        <item name="android:textColor">@drawable/main_top_tv_color</item>
+        <item name="android:background">@drawable/main_top_right_tv_bg</item>
+    </style>
+
+    <!--底部字体-->
+    <style name="MainBottomRescueTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_9</item>
+        <item name="android:textColor">@color/main_light_color</item>
+    </style>
+
+    <!--各端选择-->
+    <style name="loginStyle">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/dp_14</item>
+        <item name="android:textColor">@drawable/login_top_tv_color</item>
+        <item name="android:background">@drawable/login_bg_color</item>
+    </style>
+
+    <!--个人中心左边-->
+    <style name="PersonCenterLeftTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_17</item>
+        <item name="android:textColor">@color/person_center_left_tv</item>
+    </style>
+    <!--个人中心右边-->
+    <style name="PersonCenterRightTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_15</item>
+        <item name="android:textColor">@color/person_center_right_tv</item>
+    </style>
+    <!--个人中心弹窗-->
+    <style name="CenterDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--地图弹窗-->
+    <style name="LocCenterDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.8</item>
+    </style>
+
+    <!--注册必填的标识-->
+    <style name="RegisterStarStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_14</item>
+        <item name="android:textColor">@color/register_star</item>
+    </style>
+
+    <!--注册文字样式-->
+    <style name="RegisterTextViewStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/dp_14</item>
+        <item name="android:textColor">@color/text_black_color</item>
+        <item name="android:textColorHint">@color/text_black_color</item>
+        <item name="android:background">@null</item>
+        <item name="android:maxLength">20</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+    <!--首页用户信息数量文字样式-->
+    <style name="MainUserTextViewStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_15</item>
+        <item name="android:textColor">@color/text_black_color</item>
+    </style>
+
+    <!--首页用户信息描述文字样式-->
+    <style name="MainUserDescribeStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_9</item>
+        <item name="android:textColor">@color/person_center_right_tv</item>
+    </style>
+
+    <!--实名认证文字样式-->
+    <style name="RealAuthTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_12</item>
+        <item name="android:textColor">@color/text_black_color</item>
+    </style>
+
+
+    <style name="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <style name="weiboDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/Animation.AppCompat.Dialog</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!--黑色title的文字-->
+    <style name="BlackTitleTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_18</item>
+        <item name="android:textColor">@color/text_black_title</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+
+    <!--白色title的文字-->
+    <style name="WhiteTitleTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_15</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <!--灰色title的文字-->
+    <style name="ElseTitleTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_14</item>
+        <item name="android:textColor">@color/text_black_title</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!--小哥发布的文字-->
+    <style name="DriverTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_9</item>
+        <item name="android:textColor">@color/text_black_color</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:maxEms">20</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!--底部导航栏LinearLayout样式-->
+    <style name="AppBottomMainLlStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="AppBottomMainTvStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@drawable/app_station_bottom_tv_color</item>
+    </style>
+
+    <style name="MyProgressBar" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">50dip</item>
+        <item name="android:minHeight">10dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:progressDrawable">@drawable/progressbar_h1</item>
+    </style>
+
+</resources>

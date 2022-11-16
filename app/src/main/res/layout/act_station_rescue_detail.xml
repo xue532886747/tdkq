@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnablePureScrollMode="true">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:fitsSystemWindows="true">
+
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentScrim="@color/transparent"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_44"
+                        app:contentInsetStart="0dp"
+                        app:layout_collapseMode="pin">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/main_light_color">
+
+                            <LinearLayout
+                                android:id="@+id/ll_back"
+                                android:layout_width="@dimen/dp_44"
+                                android:layout_height="match_parent"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_16"
+                                    android:layout_height="@dimen/dp_16"
+                                    android:src="@mipmap/log_white_back" />
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/WhiteTitleTextViewStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rescue_detail" />
+
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.Toolbar>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_collapseMode="parallax"
+                        app:layout_collapseParallaxMultiplier="0.6">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_44" />
+
+                        <com.baidu.mapapi.map.MapView
+                            android:id="@+id/map_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_250" />
+                    </LinearLayout>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestscrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                android:overScrollMode="always"
+                android:scrollbars="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,54 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+//android配置
+def config = rootProject.ext.android
+//相关库依赖
+def library = rootProject.ext.supportDependencies
+
+android {
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+
+
+    defaultConfig {
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+        testInstrumentationRunner config.testInstrumentationRunner
+
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation library.implementation_ktx_core
+    implementation library.implementation_androidx_appcompat
+    implementation library.implementation_material_material
+    androidTestImplementation library.androidTestImplementation_junit
+    testImplementation library.testImplementation_test_junit
+    androidTestImplementation library.androidTestImplementation_androidx_test_espresso
+    api "com.tencent.bugly:crashreport:latest.release"  //bugly
+    api 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    api 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+}

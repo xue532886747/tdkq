@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="three_grid_unit">12dp</dimen>
+    <dimen name="one_and_a_half_grid_unit">12dp</dimen>
+
+    <dimen name="media_grid_size">48dp</dimen>
+    <dimen name="media_grid_spacing">4dp</dimen>
+
+    <dimen name="album_item_height">72dp</dimen>
+</resources>

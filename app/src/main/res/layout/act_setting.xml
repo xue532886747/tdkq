@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:background="@color/main_light_color">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="match_parent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:src="@mipmap/log_white_back" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/WhiteTitleTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_treaty"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/PersonCenterLeftTextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:text="@string/setting_treaty"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/PersonCenterRightTextViewStyle"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textView4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView4"
+                    style="@style/PersonCenterRightTextViewStyle"
+                    android:layout_marginEnd="@dimen/dp_13"
+                    android:text="@string/right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginStart="@dimen/dp_16"
+                android:background="@color/line_black" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_clean"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/PersonCenterLeftTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:text="@string/setting_clear_cache"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_number"
+                    style="@style/PersonCenterRightTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textView3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView3"
+                    style="@style/PersonCenterRightTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_13"
+                    android:text="@string/right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginStart="@dimen/dp_16"
+                android:background="@color/line_black" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_about"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/PersonCenterLeftTextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:text="@string/setting_connect"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/PersonCenterRightTextViewStyle"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textView5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView5"
+                    style="@style/PersonCenterRightTextViewStyle"
+                    android:layout_marginEnd="@dimen/dp_13"
+                    android:text="@string/right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginStart="@dimen/dp_16"
+                android:background="@color/line_black" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_account"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="@dimen/dp_44"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/PersonCenterLeftTextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:text="@string/account_manager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/PersonCenterRightTextViewStyle"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textView7"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView7"
+                    style="@style/PersonCenterRightTextViewStyle"
+                    android:layout_marginEnd="@dimen/dp_13"
+                    android:text="@string/right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_night_mode"
+                    style="@style/PersonCenterLeftTextViewStyle"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:text="@string/setting_dark_mode"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_13"
+                    android:checked="false"
+                    android:textSize="@dimen/dp_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginStart="@dimen/dp_16"
+                android:background="@color/line_black"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_quit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginStart="@dimen/dp_33"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginEnd="@dimen/dp_33"
+                android:background="@drawable/login_out"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="@string/setting_quit"
+                android:textColor="@color/login_out_text"
+                android:textSize="@dimen/dp_17" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

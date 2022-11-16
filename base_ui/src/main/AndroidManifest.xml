@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.base_ui">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application android:requestLegacyExternalStorage="true">
+
+
+        <activity android:name=".file_picker.activity.SelectFileByBrowserActivity" />
+        <activity android:name=".file_picker.activity.SelectPictureActivity" />
+        <activity android:name=".file_picker.activity.SelectFileByScanActivity" />
+
+        <provider
+            android:name=".file_picker.model.EssFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name=".file_picker.activity.PicturesViewActivity" />
+
+        <activity
+            android:name=".bigimageview.view.ImagePreviewActivity"
+            android:theme="@style/Theme.ImagePreview" />
+
+    </application>
+</manifest>

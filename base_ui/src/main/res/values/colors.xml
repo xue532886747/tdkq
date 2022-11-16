@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_light_color">#FF2AB4B4</color>
+    <color name="main_night_color">#1B1A1A</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="background">#FFFFFFFF</color>
+    <color name="white_bg">#FFFFFFFF</color>
+    <color name="main_buttom_bg_FFFEFDFC">#FFFEFDFC</color>
+    <color name="main_buttom_bg_line">#FFE6E6E6</color>
+    <color name="main_top_tv_color">#FFFFFFFF</color>
+    <color name="main_top_tv_color_no">#FFF09803</color>
+    <color name="main_list_tv_color">#FF242E42</color>
+    <color name="text_black_color">#FF666666</color>
+    <color name="ver_black_color">#FFD8D8D8</color>
+    <color name="vertext_black_color">#FF242E42</color>
+    <color name="line_black">#FFCCCCCC</color>
+    <color name="text_green_color">#FF2AB4B4</color>
+    <color name="text_login_hint">#FFCCCCCC</color>
+
+
+    <color name="person_center_left_tv">#FF333333</color>
+    <color name="person_center_right_tv">#FF999999</color>
+
+    <color name="register_star">#FFFF7C00</color>
+
+    <color name="light_gray">#fff5f5f5</color>
+    <color name="white_242242">#f2f2f2</color>
+
+
+    <color name="preview_bottom_toolbar_bg">#CC000000</color>
+    <color name="preview_bottom_size">#61FFFFFF</color>
+</resources>

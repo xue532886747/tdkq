@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:background="@color/main_light_color">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="match_parent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:src="@mipmap/log_white_back" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_88"
+        android:background="@drawable/verification_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/confirm_tel"
+            android:textColor="@color/main_top_tv_color"
+            android:textSize="@dimen/dp_18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/input_receiver_tel"
+            android:textColor="@color/main_top_tv_color"
+            android:textSize="@dimen/dp_12" />
+
+    </LinearLayout>
+
+    <com.example.towerdriver.weight.VerificationCodeEditText
+        android:id="@+id/am_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:inputType="number"
+        android:textColor="@color/text_black_color"
+        android:textSize="@dimen/dp_40"
+        app:bottomLineHeight="@dimen/dp_5"
+        app:bottomLineNormalColor="@color/ver_black_color"
+        app:bottomLineSelectedColor="@color/ver_black_color"
+        app:cursorColor="@color/ver_black_color"
+        app:figures="4"
+        app:selectedBackgroundColor="@color/white"
+        app:verCodeMargin="@dimen/dp_10" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_load"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginStart="@dimen/dp_17"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_17"
+        android:background="@drawable/login_bottom_bg"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="@string/confirm"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp_18" />
+
+</LinearLayout>

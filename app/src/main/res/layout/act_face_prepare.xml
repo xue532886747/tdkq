@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:background="@color/main_light_color">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="match_parent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:src="@mipmap/log_white_back" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/WhiteTitleTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/person_collection" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_160"
+        android:background="@mipmap/icon_home_image_guide">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_50"
+            android:text="@string/parpare_person_collection"
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/dp_20"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="@string/person_collectioning"
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/dp_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!--识别光线-->
+        <RelativeLayout
+            android:id="@+id/light_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginEnd="@dimen/dp_30"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/light_image"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:background="@color/home_text_color_white"
+                android:src="@mipmap/icon_home_guide_light" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_toEndOf="@id/light_image">
+
+                <TextView
+                    android:id="@+id/light_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_light_txt"
+                    android:textColor="@color/home_text_color_black"
+                    android:textSize="@dimen/dp_16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/light_txt"
+                    android:layout_marginTop="@dimen/dp_9"
+                    android:text="@string/home_light_explain_txt"
+                    android:textColor="@color/homr_text_color_grey"
+                    android:textSize="@dimen/dp_12" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--正对手机-->
+        <RelativeLayout
+            android:id="@+id/handset_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginEnd="@dimen/dp_30"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/light_layout">
+
+            <ImageView
+                android:id="@+id/handset_image"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:src="@mipmap/icon_home_guide_mask" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_toEndOf="@id/handset_image">
+
+                <TextView
+                    android:id="@+id/handset_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_handset_txt"
+                    android:textColor="@color/home_text_color_black"
+                    android:textSize="@dimen/dp_16" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/handset_txt"
+                    android:layout_marginTop="@dimen/dp_9"
+                    android:text="@string/home_handset_explain_txt"
+                    android:textColor="@color/homr_text_color_grey"
+                    android:textSize="@dimen/dp_12" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <!--支持口罩识别-->
+        <RelativeLayout
+            android:id="@+id/mask_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginEnd="@dimen/dp_30"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/handset_layout">
+
+            <ImageView
+                android:id="@+id/mask_image"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:src="@mipmap/icon_home_guide_handset" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_toEndOf="@id/mask_image">
+
+                <TextView
+                    android:id="@+id/mask_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_mask_txt"
+                    android:textColor="@color/home_text_color_black"
+                    android:textSize="@dimen/dp_16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mask_txt"
+                    android:layout_marginTop="@dimen/dp_9"
+                    android:text="@string/home_mask_explain_txt"
+                    android:textColor="@color/homr_text_color_grey"
+                    android:textSize="@dimen/dp_12" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_commit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_20"
+            android:background="@drawable/login_bottom_bg"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/start_person_collection"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mask_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
