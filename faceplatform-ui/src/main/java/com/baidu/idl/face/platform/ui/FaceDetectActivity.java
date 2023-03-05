@@ -264,7 +264,6 @@ public class FaceDetectActivity extends Activity implements
             mSurfaceHolder = mSurfaceView.getHolder();
             mSurfaceHolder.addCallback(this);
         }
-
         if (mCamera == null) {
             try {
                 mCamera = open();
@@ -274,14 +273,12 @@ public class FaceDetectActivity extends Activity implements
                 e.printStackTrace();
             }
         }
-
         if (mCamera == null) {
             return;
         }
         if (mCameraParam == null) {
             mCameraParam = mCamera.getParameters();
         }
-
         mCameraParam.setPictureFormat(PixelFormat.JPEG);
         int degree = displayOrientation(this);
         mCamera.setDisplayOrientation(degree);
@@ -317,7 +314,6 @@ public class FaceDetectActivity extends Activity implements
             CameraUtils.releaseCamera(mCamera);
             mCamera = null;
         }
-
     }
 
     protected void stopPreview() {

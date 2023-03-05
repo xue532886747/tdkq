@@ -9,12 +9,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/drawable/app_station_bottom_tv_color.xml" value="0.4875" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/drawable/login_bottom_bg.xml" value="0.21302083333333333" />
         <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/drawable/main_rescue_battery_color.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/drawable/staff_order_select.xml" value="0.4875" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_collect_success.xml" value="0.23802083333333332" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_create_approval.xml" value="0.5541666666666667" />
         <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_face_prepare.xml" value="0.25364583333333335" />
         <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_good_detail.xml" value="0.17300724637681159" />
         <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_invite_list.xml" value="0.25364583333333335" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_login.xml" value="0.264" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_main.xml" value="0.4" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_pay_style.xml" value="0.23802083333333332" />
         <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_real_auth.xml" value="0.2" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_register.xml" value="0.25364583333333335" />
         <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_rentcar_detail.xml" value="0.1390625" />
         <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_repair_main.xml" value="0.4841025641025641" />
         <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_select_menu.xml" value="0.17300724637681159" />
@@ -22,8 +29,11 @@
         <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/act_staff_main.xml" value="0.4713541666666667" />
         <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/adp_main_list_item.xml" value="0.17300724637681159" />
         <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/adp_menu_right.xml" value="0.17300724637681159" />
-        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/fragment_station_mine.xml" value="0.25364583333333335" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/fragment_launch_list.xml" value="0.5541666666666667" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/fragment_station_mine.xml" value="0.6666666666666666" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/app/src/main/res/layout/fragment_station_order_list.xml" value="0.5541666666666667" />
         <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/faceplatform-ui/src/main/res/layout/activity_face_liveness_v3100.xml" value="0.25364583333333335" />
+        <entry key="..\:/AndroidProject/New_NFC_Project/tdkq/zxing/src/main/res/layout/activity_capture.xml" value="0.5536458333333333" />
       </map>
     </option>
   </component>

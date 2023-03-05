@@ -40,6 +40,7 @@ import com.example.towerdriver.utils.tools.LogUtils;
 import com.example.towerdriver.utils.tools.StatusBarUtil;
 import com.example.towerdriver.webview.MyWebViewActivity;
 import com.hjq.toast.ToastUtils;
+import com.tencent.mmkv.MMKV;
 
 import java.util.HashSet;
 import java.util.Objects;
@@ -394,6 +395,10 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
      */
     @Override
     public void LoginSuccess(String msg, int type) {
+        MMKV mmkv2 = MMKV.mmkvWithID("id");
+        if (mmkv2!=null) {
+            mmkv2.encode("Type", type);
+        }
         closeDialog();
         ToastUtils.show("登录成功");
         if (mLastLoginType != 0) {         //是否是登陆过期引起的登陆,如果不是直接跳转主页，如果是就关闭当前登录页

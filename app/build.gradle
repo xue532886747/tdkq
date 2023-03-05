@@ -166,7 +166,7 @@ dependencies {
     //微信支付
     implementation library.implementation_wechat
     implementation 'me.zhanghai.android.materialratingbar:library:1.4.0'
-
+    implementation 'com.tencent:mmkv-static:1.2.7'
 }
 repositories {
     mavenCentral()

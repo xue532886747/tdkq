@@ -71,7 +71,6 @@
                 android:layout_marginEnd="@dimen/dp_23"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:src="@mipmap/main_code"
-                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
